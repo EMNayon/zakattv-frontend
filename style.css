@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background: #f2f2f2;
+    padding-bottom: 60px;
+    padding-top: 60px;
 
 }
 
@@ -63,6 +65,15 @@ body {
 
 /* trending button */
 
+
+.bottom-header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+
 .scroll-container {
     white-space: nowrap;
     overflow: hidden;
@@ -71,7 +82,8 @@ body {
 
   .scroll-content {
     display: inline-flex;
-    animation: marquee 10s linear infinite;
+    animation: marquee 30s linear infinite;
+    will-change: transform;
   }
 
   .scroll-container:hover .scroll-content {
@@ -90,6 +102,7 @@ body {
   .scroll-content button {
     margin: 0 5px;
   }
+
 
 
 
