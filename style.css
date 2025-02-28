@@ -134,3 +134,76 @@ body {
 .dhakarome:hover a {
     text-decoration: underline; 
 }
+
+
+
+/* প্রিন্ট করার সময় শুধুমাত্র .print-content অংশ দেখাবে */
+@media print {
+  body * {
+      display: none !important; /* সবকিছু লুকাবে */
+  }
+  .print-content, .print-content * {
+      display: block !important; /* শুধুমাত্র নির্দিষ্ট অংশ দেখাবে */
+  }
+}
+
+
+/* photo storeis section start */
+
+.video-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.video-card:hover img {
+  filter: brightness(70%);
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  color: #ff9800;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+}
+
+.video-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: justify;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.section-title::before {
+  content: "";
+  width: 5px;
+  height: 20px;
+  background: #ff9800;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* photo story section end */
+

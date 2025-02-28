@@ -12,6 +12,150 @@
     <link rel="stylesheet" href="style.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        .playlist-container {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 350px;
+}
+
+.video-list {
+    max-height: 300px; /* 4 টার বেশি হলে স্ক্রল হবে */
+    overflow-y: auto;
+}
+
+.video-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.video-item.active, .video-item:hover {
+    background: #fde7b0;
+}
+
+.video-thumbnail {
+    position: relative;
+    margin-right: 10px;
+}
+
+.video-thumbnail img {
+    width: 70px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.play-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: #ff9800;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.video-info {
+    flex-grow: 1;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Scrollbar Styling */
+.video-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.video-list::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 5px;
+}
+
+.video-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+    </style>
+
+    <!-- <style>
+        .playlist-container {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            max-width: 350px;
+        }
+
+        .playlist-header {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .video-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .video-item.active,
+        .video-item:hover {
+            background: #fde7b0;
+            /* Highlight Color */
+        }
+
+        .video-item img {
+            width: 70px;
+            height: 50px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .play-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            color: #ff9800;
+            border-radius: 50%;
+            padding: 6px;
+            font-size: 14px;
+        }
+
+        .video-info {
+            flex-grow: 1;
+        }
+
+        .video-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .video-number {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .video-thumbnail {
+            position: relative;
+        }
+    </style> -->
 </head>
 
 <body>
@@ -27,13 +171,13 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto ">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">মূল পাতা</a>
+                            <a class="nav-link" href="javascript:void(0)">মূল পাতা</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="recent.html">সাম্প্রতিক</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="videos.html">ভিডিও</a>
+                            <a class="nav-link" href="javascript:void(0)">ভিডিও</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -44,8 +188,6 @@
             </div>
         </nav>
     </header>
-
-
     <div class="container-fluid mt-5">
         <div class="row d-flex ">
             <div class="col-2 mt-4">
@@ -179,99 +321,106 @@
             </div>
 
             <div class="col-10">
+                <div class="row">
+                    <div class="col-8">
+                        <iframe width="100%" height="315" class="h-full w-full object-cover"
+                            src="https://www.youtube.com/embed/iMA1qlHVjNQ" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-   
+                            share" allowfullscreen="">
+                        </iframe>
 
-                <h1 class="pb-4 text-uppercase fw-bold text-black fs-2">
-                    সাম্প্রতিক খবর
-                </h1>
-
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="row align-items-center p-3 rounded transition-transform scale-hover  hover-effect"
-                            data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                            <div class="col-md-4">
-                                <a href="" class="text-decoration-none">
-                                    <img src="image6.png" alt=""
-                                        class="img-fluid rounded w-100 opacity-hover artile-image">
-                                </a>
+                        <!-- Social Media & Action Icons -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-1"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="#" class="btn btn-outline-info btn-sm me-1"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-outline-success btn-sm me-1"><i
+                                        class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-1"><i
+                                        class="fab fa-linkedin"></i></a>
                             </div>
-                            <div class="col-md-8">
-                                <a href="category-details.html" class="text-decoration-none">
-                                    <span>২ ঘণ্টা আগে</span>
-                                    <h2 class="mb-2 fw-bold text-black fs-5 text-hover-warning">‘বাংলাদেশের প্রতিরক্ষা
-                                        ব্যবস্থাকে আরো শক্তিশালী করতে হবে’
-                                    </h2>
-
-                                    <div class="mb-2  text-muted small fw-bold">
-                                    </div>
-                                    <p class="text-muted small" style="text-align: justify">
-                                        বাংলাদেশের প্রতিরক্ষা ব্যবস্থাকে আরো শক্তিশালী করতে হবে বলে জানিয়েছেন সেনাপ্রধান
-                                        জেনারেল ওয়াকার-উজ-জামান। আজ (রোববার, ২৩ ফেব্রুয়ারি) রাতে রাজধানীর একটি হোটেলে
-                                        ফাউন্ডেশন ফর স্ট্র্যাটেজিক অ্যান্ড ডেভেলপমেন্ট স্টাডিজের আত্মপ্রকাশ অনুষ্ঠানে
-                                        তিনি এ কথা বলেন।
-                                    </p>
+                            <div>
+                                <button onclick="printArticle()" class="btn btn-outline-dark btn-sm me-1"><i
+                                        class="fas fa-print"></i></button>
+                                <button onclick="copyToClipboard()" class="btn btn-outline-dark btn-sm me-1"><i
+                                        class="fas fa-copy"></i></button>
+                                <button onclick="shareArticle()" class="btn btn-outline-dark btn-sm"><i
+                                        class="fas fa-share-alt"></i></button>
                             </div>
                         </div>
+
+                        <h2 class="fs-4 fw-bold text-start text-dark">
+                            <!-- <span class="border-start border-3 border-warning me-2 d-inline-block"></span> -->
+                            ঐতিহ্য হারাচ্ছে কিশোরগঞ্জের আঞ্চলিক ভাষা, নড়বড়ে ভিত
+                        </h2>
                     </div>
-                    <hr class="text-danger">
-                </div>
+                    <div class="col-4">
+                        <div class="playlist-container">
+                            <h5 class="playlist-header">📽️ ছবির গল্প</h5>
+                            <p class="text-muted">1/50 ভিডিও</p>
 
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="row align-items-center p-3 rounded transition-transform scale-hover  hover-effect"
-                            data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                            <div class="col-md-4">
-                                <a href="" class="text-decoration-none">
-                                    <img src="image6.png" alt=""
-                                        class="img-fluid rounded w-100 opacity-hover artile-image">
-                                </a>
-                            </div>
-                            <div class="col-md-8">
-                                <a href="" class="text-decoration-none">
-                                    <h2 class="mb-2 fw-bold text-black fs-5 text-hover-warning">‘বাংলাদেশের প্রতিরক্ষা
-                                        ব্যবস্থাকে আরো শক্তিশালী করতে হবে’
-                                    </h2>
-                                    <div class="mb-2  text-muted small fw-bold">
+                            <div class="video-list">
+                                <div class="video-item active">
+                                    <div class="video-thumbnail">
+                                        <img src="image1.png" alt="Thumbnail">
+                                        <i class="fas fa-play play-icon"></i>
                                     </div>
-                                    <p class="text-muted small" style="text-align: justify">
-                                        বাংলাদেশের প্রতিরক্ষা ব্যবস্থাকে আরো শক্তিশালী করতে হবে বলে জানিয়েছেন সেনাপ্রধান
-                                        জেনারেল ওয়াকার-উজ-জামান। আজ (রোববার, ২৩ ফেব্রুয়ারি) রাতে রাজধানীর একটি হোটেলে
-                                        ফাউন্ডেশন ফর স্ট্র্যাটেজিক অ্যান্ড ডেভেলপমেন্ট স্টাডিজের আত্মপ্রকাশ অনুষ্ঠানে
-                                        তিনি এ কথা বলেন।
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="text-danger">
-                </div>
-                <!-- <div class="row g-4"></div> -->
-                <div class="col-12">
-                    <div class="row align-items-center p-3 rounded transition-transform scale-hover  hover-effect"
-                        data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                        <div class="col-md-4">
-                            <a href="" class="text-decoration-none">
-                                <img src="image6.png" alt="" class="img-fluid rounded w-100 opacity-hover artile-image">
-                            </a>
-                        </div>
-                        <div class="col-md-8">
-                            <a href="" class="text-decoration-none">
-                                <h2 class="mb-2 fw-bold text-black fs-5 text-hover-warning">‘বাংলাদেশের প্রতিরক্ষা
-                                    ব্যবস্থাকে আরো শক্তিশালী করতে হবে’
-                                </h2>
-                                <div class="mb-2  text-muted small fw-bold">
+                                    <div class="video-info">
+                                        <p class="video-title">কিভাবে সর্বোচ্চ নেতা নির্বাচন করে চীন?</p>
+                                    </div>
                                 </div>
-                                <p class="text-muted small" style="text-align: justify">
-                                    বাংলাদেশের প্রতিরক্ষা ব্যবস্থাকে আরো শক্তিশালী করতে হবে বলে জানিয়েছেন সেনাপ্রধান
-                                    জেনারেল ওয়াকার-উজ-জামান। আজ (রোববার, ২৩ ফেব্রুয়ারি) রাতে রাজধানীর একটি হোটেলে
-                                    ফাউন্ডেশন ফর স্ট্র্যাটেজিক অ্যান্ড ডেভেলপমেন্ট স্টাডিজের আত্মপ্রকাশ অনুষ্ঠানে
-                                    তিনি এ কথা বলেন।
-                                </p>
+
+                                <div class="video-item">
+                                    <div class="video-thumbnail">
+                                        <img src="image2.png" alt="Thumbnail">
+                                        <i class="fas fa-play play-icon"></i>
+                                    </div>
+                                    <div class="video-info">
+                                        <p class="video-title">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <div class="video-thumbnail">
+                                        <img src="image3.png" alt="Thumbnail">
+                                        <i class="fas fa-play play-icon"></i>
+                                    </div>
+                                    <div class="video-info">
+                                        <p class="video-title">প্রিয় খুলনা | বাণিজ্যের অন্যতম কেন্দ্র</p>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <div class="video-thumbnail">
+                                        <img src="image4.png" alt="Thumbnail">
+                                        <i class="fas fa-play play-icon"></i>
+                                    </div>
+                                    <div class="video-info">
+                                        <p class="video-title">তিনশ, চিনিস ও মসজিদের শহর নীলফামারী</p>
+                                    </div>
+                                </div>
+
+                                <div class="video-item">
+                                    <div class="video-thumbnail">
+                                        <img src="image4.png" alt="Thumbnail">
+                                        <i class="fas fa-play play-icon"></i>
+                                    </div>
+                                    <div class="video-info">
+                                        <p class="video-title">তিনশ, চিনিস ও মসজিদের শহর নীলফামারী</p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <hr class="text-danger">
+
             </div>
+
         </div>
     </div>
+
 
     <footer class="mt-4">
         <div class="container-fluid">
