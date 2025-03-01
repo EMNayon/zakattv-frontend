@@ -185,94 +185,109 @@
                         <h4 class="m-0">আজকের শিরোনাম</h4>
                     </div>
                     <div class="col-lg-7 bg-white p-4">
-                        <a href="gallery-details.html" class="text-decoration-none">
-
-                            <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="image1.png" class="img-fluid mb-4" alt="News Image 1">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="image2.png" class="img-fluid mb-4" alt="News Image 2">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="image3.png" class="img-fluid mb-4" alt="News Image 3">
-                                    </div>
-                                </div>
-                                <!-- Carousel Controls (Previous & Next) -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                </button>
-                            </div>
+                        <div class="w-100 py-3 mb-3">
                             <h2 class="fs-4 fw-bold text-start text-dark">
+                                <!-- <span class="border-start border-3 border-warning me-2 d-inline-block"></span> -->
                                 ঐতিহ্য হারাচ্ছে কিশোরগঞ্জের আঞ্চলিক ভাষা, নড়বড়ে ভিত
                             </h2>
-                            <span class="time-text-color">২ ঘণ্টা আগে</span>
     
-                            <p class="text-justify text-muted">বিশ্বের অধিকাংশ আয়ু ফুরানো জাহাজের গল্প শেষ হয় বাংলাদেশে। এরপর খণ্ডবিখণ্ড হয়ে এসব জাহাজ প্রাণ
-                                সঞ্চার করে দেশের ছোট-বড় অসংখ্য শিল্প আর
-                                অর্থনৈতিক কর্মকাণ্ডে। এর ওপর নির্ভর করে আবর্তিত হয় প্রায় লাখ কোটি টাকার অর্থনীতি।</p>
-                        </a>
+                            <div class="d-flex justify-content-between align-items-center text-muted small">
+                                <span>
+                                    <strong>প্রতিবেদক:</strong>
+                                    <a href="reporter.html" class="text-muted text-decoration-none"> ইমরান মাসুদ 
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </span>
+                                <span>প্রকাশ: ২৮ ফেব্রুয়ারি ২০২৫, ৯:৫৩ পূর্বাহ্ন</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media & Action Icons -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-1"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="btn btn-outline-info btn-sm me-1"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-outline-success btn-sm me-1"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-1"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                            <div>
+                                <button onclick="printArticle()" class="btn btn-outline-dark btn-sm me-1"><i class="fas fa-print"></i></button>
+                                <button onclick="copyToClipboard()" class="btn btn-outline-dark btn-sm me-1"><i class="fas fa-copy"></i></button>
+                                <button onclick="shareArticle()" class="btn btn-outline-dark btn-sm"><i class="fas fa-share-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <img src="image6.png" alt="" class="img-fluid mb-4">
+                            <p class="pb-4 mx-auto  lh-base fw-medium details" style="text-align: justify">
+                                যেই ভাষায় একদিন গাঁথা হয়েছে অসংখ্য লোকগীতি, পালাগান আর সাহিত্যকর্ম, কালের বিবর্তনে কিশোরগঞ্জের আঞ্চলিক সে ভাষা হারাতে বসেছ 
+                                তার ঐতিহ্য। আধুনিকতার ছোঁয়ায় নড়বড়ে হয়েছে এ ভাষার ভিত। বিশেষজ্ঞরা বলছেন, আঞ্চলিক ভাষা টিকিয়ে রাখতে প্রয়োজন সংস্কৃতির চর্চা ও 
+                                যথাযথ সংরক্ষণ। নাম খোকন বয়াতি, বাড়ি কিশোরগঞ্জ কাজ করেন পালা গান নিয়ে। নাম খোকন হলেও কিশোরগঞ্জের আঞ্চলিক ভাষায় তিনি 
+                                পরিচিত 'কুকন বয়াতী' হিসেবে। আধুনিক এই যুগে খোকন বয়াতিরাই ধরে রেখেছে আঞ্চলিকতার হাল। তার কাছে শুনবো কিশোরগঞ্জের আঞ্চলিক 
+                                ভাষার গান। খোকন বয়াতি চম্পাবতী, চন্দ্রাবতীর পালায় খোঁজেন কিশোরগঞ্জের মাটির গন্ধ। বয়াতীর গানের টানে উতলা হয়ে ওঠে শ্রোতা মন। যে গান 
+                                বহন করে মানুষের কথা। কিন্তু সময়ের সাথে যেন তার সুর বদলাচ্ছে। আঞ্চলিক ভাষায় ধীরে ধীরে প্রবেশ করছে আধুনিকতা। তবুও বিভিন্ন এলাকা ঘুরে 
+                                এই ভাষাকে বাঁচিয়ে রাখার চেষ্টা তার। অঞ্চলভিত্তিক ভাষার মধ্যে বরিশাল, চট্টগ্রাম, রাজশাহী, নোয়াখালীর সাথে উঠে আসে বৃহত্তম ময়মনসিংহের 
+                                ভাষা। ময়মনসিংহ, কিশোরগঞ্জ, নেত্রকোণা, জামালপুর এলাকার স্থানীয় ভাষায় অন্য রকম এক রস আছে।
+                            </p>
+                        </div>
 
                     </div>
                     <div class="col-lg-5">
-
+                        <div class="d-flex align-items-center gap-2 pb-2">
+                            <div class="w-1 h-5 bg-ekhon-orange-200"></div>
+                            <h4 class="m-0">আরও ছবি</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="photo-story-details.html" class="text-decoration-none">
+                                    <img src="image2.png" alt="" class="img-fluid rounded">
+                                    <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                    <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p> 
+                                   
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="photo-story-details.html" class="text-decoration-none">
+                                    <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
+                                    <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                    <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="photo-story-details.html" class="text-decoration-none">
+                                    <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
+                                    <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                    <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="photo-story-details.html" class="text-decoration-none">
+                                    <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
+                                    <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                    <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="photo-story-details.html" class="text-decoration-none">
+                                    <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
+                                    <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                    <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="photo-story-details.html" class="text-decoration-none">
+                                    <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
+                                    <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                    <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row mt-4">
-                    <div class="d-flex align-items-center gap-2 pb-2">
-                        <div class="w-1 h-5 bg-ekhon-orange-200"></div>
-                        <h4 class="m-0">আরও ছবি</h4>
-                    </div>
+                   
 
-                    <div class="col-md-2 col-lg-3">
-                        <a href="photo-story-details.html" class="text-decoration-none">
-                            <img src="image2.png" alt="" class="img-fluid rounded">
-                            <span class="time-text-color">২ ঘণ্টা আগে</span>
-                            <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p> 
-                           
-                        </a>
-                    </div>
-
-                    <div class="col-md-2 col-lg-3">
-                        <a href="photo-story-details.html" class="text-decoration-none">
-                            <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
-                            <span class="time-text-color">২ ঘণ্টা আগে</span>
-                            <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
-                        </a>
-                    </div>
-                    <div class="col-md-2 col-lg-3">
-                        <a href="photo-story-details.html" class="text-decoration-none">
-                            <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
-                            <span class="time-text-color">২ ঘণ্টা আগে</span>
-                            <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
-                        </a>
-                    </div>
-                    <div class="col-md-2 col-lg-3">
-                        <a href="photo-story-details.html" class="text-decoration-none">
-                            <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
-                            <span class="time-text-color">২ ঘণ্টা আগে</span>
-                            <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
-                        </a>
-                    </div>
-                    <div class="col-md-2 col-lg-3">
-                        <a href="photo-story-details.html" class="text-decoration-none">
-                            <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
-                            <span class="time-text-color">২ ঘণ্টা আগে</span>
-                            <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
-                        </a>
-                    </div>
-                    <div class="col-md-2 col-lg-3">
-                        <a href="photo-story-details.html" class="text-decoration-none">
-                            <img src="image2.png" alt="Thumbnail" class="img-fluid rounded">
-                            <span class="time-text-color">২ ঘণ্টা আগে</span>
-                            <p class="video-title ">ব্রক্ষপুত্রের চরে বদলে যাওয়া অর্থনীতি</p>
-                        </a>
-                    </div>
+                   
                 </div>
 
             </div>

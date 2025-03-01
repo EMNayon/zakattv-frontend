@@ -219,10 +219,17 @@ body {
   text-align: justify;
   font-size: 0.75rem;
   line-height: 1.5rem;
+  
 }
 
 .bg-ekhon-orange-200{
   background-color:  rgb(251 177 26 );
   width: .25rem;
   height: 1.2rem;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
 }
