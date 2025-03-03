@@ -327,3 +327,33 @@ footer a:hover {
 
 
 /* header navbar */
+
+
+@keyframes pulse-animation {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+.pulse-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 54 54 );
+  border-radius: 50px;
+  animation: pulse-animation 1.5s infinite;
+}
+
+
+.navbar.fixed-bottom {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+
+.nav-link i {
+  font-size: 20px;
+}

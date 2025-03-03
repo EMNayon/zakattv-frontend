@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <nav class="navbar  navbar-expand-sm bg-white border-bottom shadow-sm fixed-top">
+        <nav class="navbar  navbar-expand-sm bg-white border-bottom shadow-sm fixed-top d-none d-sm-block">
             <div class="container-fluid">
                 <a class="navbar-brand" href="javascript:void(0)">
                     <img src="logo.jpg" alt="" style="width: 50px;">
@@ -44,17 +44,37 @@
             </div>
         </nav>
     </header>
-
+    <header>
+        <nav class="navbar navbar-expand bg-white shadow-sm fixed-bottom d-sm-none">
+            <div class="container-fluid justify-content-around">
+                <a class="nav-link text-center" href="index.html">
+                    <i class="fas fa-home" style="color: orange;"></i><br>
+                    <span style="color: orange;">মূল পাতা</span>
+                </a>
+                <a class="nav-link text-center" href="recent.html">
+                    <i class="fas fa-clock"></i><br>
+                    সাম্প্রতিক
+                </a>
+                <a class="nav-link text-center" href="videos.html">
+                    <i class="fas fa-video"></i><br>
+                    ভিডিও
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- FontAwesome Icon CDN -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script> -->
+    
     <div class="container-fluid mt-5">
         <div class="row d-flex ">
             <div class="col-2 mt-4">
-                <div class="zkt-live ">
-                    <div class="animation ">
-                        <div class="ping">
-                            <button class="animated-btn btn">Click me</button>
-                        </div>
-                    </div>
-                </div>
+                <div class="  position-relative" style="width: fit-content;">
+                    <div class="pulse-effect"></div>
+                    <a href="#" class="btn  rounded-pill px-4 py-2 fw-bold   position-relative d-flex align-items-center" style="z-index: 1; background-color:rgb(255 54 54 ) ;  height: 100%; width: auto;" >
+                        <span class="text-white"><i class="fa-solid fa-video ms-2 me-2"></i> সরাসরি দেখুন</span>
+                    </a>
+                </div> 
 
 
                 <div class="zkt-time  bg-white p-2 mt-5" style=" border-radius: 20px;">
