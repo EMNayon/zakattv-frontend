@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat TV</title>
+    <!-- Bootsrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar  navbar-expand-sm bg-white border-bottom shadow-sm fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img src="logo.jpg" alt="" style="width: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">মূল পাতা</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recent.html">সাম্প্রতিক</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="videos.html">ভিডিও</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid mt-5">
+        <div class="row d-flex ">
+            <div class="col-2 mt-4">
+                <div class="zkt-live ">
+                    <div class="animation ">
+                        <div class="ping">
+                            <button class="animated-btn btn">Click me</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="zkt-time  bg-white p-2 mt-5" style=" border-radius: 20px;">
+                    <div class="ms-3">
+                        <strong>
+                            <div class="mb-2 fs-5" id="time"></div>
+                        </strong>
+                        <div id="date"></div>
+                    </div>
+                </div>
+
+                <div class="sidebar  mt-3">
+                    <button class="btn btn-danger ms-3 mt-3 p-2"><i class="fa-solid fa-video me-2"></i> Picture
+                        Story</button>
+                    <nav class="navbar navbar-expand-lg  flex-column">
+                        <div class="container-fluid">
+                            <div id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">দেশে এখন</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <div class="accordion  border-0" id="accordionPanelsStayOpenExample"
+                                            style="margin-left: -12px;">
+                                            <div class="accordion-item  border-0">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button border-0 shadow-none"
+                                                        style="display: flex; justify-content: space-between; align-items: center; background-color: #fff;"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseOne"
+                                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                        <a class="text-decoration-none text-dark" href="#">অর্থনীতি</a>
+
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseOne"
+                                                    class="accordion-collapse collapse show"
+                                                    data-bs-parent="#accordionPanelsStayOpenExample">
+                                                    <div class="accordion-body pt-0 ps-5">
+                                                        <div class="d-flex">
+                                                            <div class="vr" style=" margin-right: 10px;"></div>
+                                                            <ul class="list-unstyled">
+                                                                <li><a class="text-decoration-none text-dark"
+                                                                        href="#">শিল্প-কারখানা</a></li>
+                                                                <li><a class="text-decoration-none text-dark"
+                                                                        href="#">শিল্প-কারখানা</a></li>
+                                                                <li><a class="text-decoration-none text-dark"
+                                                                        href="#">শিল্প-কারখানা</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="accordion  border-0" id="accordionPanelsStayOpenExample"
+                                            style="margin-left: -12px;">
+                                            <div class="accordion-item  border-0">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button border-0 shadow-none"
+                                                        style="display: flex; justify-content: space-between; align-items: center; background-color: #fff;"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseOne"
+                                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                        <a class="text-decoration-none text-dark" href="#">কৃষি</a>
+
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseOne"
+                                                    class="accordion-collapse collapse show"
+                                                    data-bs-parent="#accordionPanelsStayOpenExample">
+                                                    <div class="accordion-body pt-0 ps-5">
+                                                        <div class="d-flex">
+                                                            <div class="vr" style=" margin-right: 10px;"></div>
+                                                            <ul class="list-unstyled">
+                                                                <li><a class="text-decoration-none text-dark"
+                                                                        href="#">মৎস্য ও প্রাণীসম্পদ</a></li>
+                                                                <li><a class="text-decoration-none text-dark"
+                                                                        href="#">মৎস্য ও প্রাণীসম্পদ</a></li>
+                                                                <li><a class="text-decoration-none text-dark"
+                                                                        href="#">মৎস্য ও প্রাণীসম্পদ</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="col-10">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 print-content bg-white p-3 ">
+                        <div class="w-100 py-3 mb-3">
+                            <h2 class="fs-4 fw-bold text-start text-dark">
+                                <!-- <span class="border-start border-3 border-warning me-2 d-inline-block"></span> -->
+                                ঐতিহ্য হারাচ্ছে কিশোরগঞ্জের আঞ্চলিক ভাষা, নড়বড়ে ভিত
+                            </h2>
+    
+                            <div class="d-flex justify-content-between align-items-center text-muted small">
+                                <span>
+                                    <strong>প্রতিবেদক:</strong>
+                                    <a href="reporter.html" class="text-muted text-decoration-none"> ইমরান মাসুদ 
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </span>
+                                <span>প্রকাশ: ২৮ ফেব্রুয়ারি ২০২৫, ৯:৫৩ পূর্বাহ্ন</span>
+                            </div>
+                        </div>
+                        <img src="image6.png" alt="" class="img-fluid mb-4">
+
+                        <!-- Social Media & Action Icons -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-1"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="btn btn-outline-info btn-sm me-1"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-outline-success btn-sm me-1"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-1"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                            <div>
+                                <button onclick="printArticle()" class="btn btn-outline-dark btn-sm me-1"><i class="fas fa-print"></i></button>
+                                <button onclick="copyToClipboard()" class="btn btn-outline-dark btn-sm me-1"><i class="fas fa-copy"></i></button>
+                                <button onclick="shareArticle()" class="btn btn-outline-dark btn-sm"><i class="fas fa-share-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- Post content -->
+                                <div class="pb-4 mx-auto  lh-base fw-medium details" style="text-align: justify">
+                                    যেই ভাষায় একদিন গাঁথা হয়েছে অসংখ্য লোকগীতি, পালাগান আর সাহিত্যকর্ম, কালের বিবর্তনে কিশোরগঞ্জের আঞ্চলিক সে ভাষা হারাতে বসেছ 
+                                    তার ঐতিহ্য। আধুনিকতার ছোঁয়ায় নড়বড়ে হয়েছে এ ভাষার ভিত। বিশেষজ্ঞরা বলছেন, আঞ্চলিক ভাষা টিকিয়ে রাখতে প্রয়োজন সংস্কৃতির চর্চা ও 
+                                    যথাযথ সংরক্ষণ। নাম খোকন বয়াতি, বাড়ি কিশোরগঞ্জ কাজ করেন পালা গান নিয়ে। নাম খোকন হলেও কিশোরগঞ্জের আঞ্চলিক ভাষায় তিনি 
+                                    পরিচিত 'কুকন বয়াতী' হিসেবে। আধুনিক এই যুগে খোকন বয়াতিরাই ধরে রেখেছে আঞ্চলিকতার হাল। তার কাছে শুনবো কিশোরগঞ্জের আঞ্চলিক 
+                                    ভাষার গান। খোকন বয়াতি চম্পাবতী, চন্দ্রাবতীর পালায় খোঁজেন কিশোরগঞ্জের মাটির গন্ধ। বয়াতীর গানের টানে উতলা হয়ে ওঠে শ্রোতা মন। যে গান 
+                                    বহন করে মানুষের কথা। কিন্তু সময়ের সাথে যেন তার সুর বদলাচ্ছে। আঞ্চলিক ভাষায় ধীরে ধীরে প্রবেশ করছে আধুনিকতা। তবুও বিভিন্ন এলাকা ঘুরে 
+                                    এই ভাষাকে বাঁচিয়ে রাখার চেষ্টা তার। অঞ্চলভিত্তিক ভাষার মধ্যে বরিশাল, চট্টগ্রাম, রাজশাহী, নোয়াখালীর সাথে উঠে আসে বৃহত্তম ময়মনসিংহের 
+                                    ভাষা। ময়মনসিংহ, কিশোরগঞ্জ, নেত্রকোণা, জামালপুর এলাকার স্থানীয় ভাষায় অন্য রকম এক রস আছে।
+                                </div>
+                                <div>
+                                    <h5 class="text-decoration-underline fs-5">আরও পড়ুনঃ </h5>
+                                    <a class="btn btn-sm btn-warning" href="">মানিকগঞ্জ</a>
+                                    <a class="btn btn-sm btn-warning" href="">মানিকগঞ্জ</a>
+                                    <a class="btn btn-sm btn-warning" href="">মানিকগঞ্জ</a>
+                                    <a class="btn btn-sm btn-warning" href="">মানিকগঞ্জ</a>
+                                    <a class="btn btn-sm btn-warning" href="">মানিকগঞ্জ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4  p-3 ">
+                        <div class="d-flex align-items-center gap-2 pb-2">
+                            <div class="w-1 h-5 bg-ekhon-orange-200"></div>
+                            <h4 class="m-0">এই সম্পর্কিত অন্যান্য খবর</h4>
+                        </div>
+
+                        <div class=" d-flex justify-content-center  gap-3">
+                            <div>
+                                <img src="image6.png" class="rounded-1" width="140px" alt="">
+                            </div>
+                            <div>
+                                <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                <p>যারা এখনো অন্যায় করছে তাদের বিরুদ্ধে প্রতিবাদ করা উচিত</p>
+                            </div>
+                        </div>
+                        <div class=" d-flex justify-content-center  gap-3">
+                            <div>
+                                <img src="image6.png" class="rounded-1" width="140px" alt="">
+                            </div>
+                            <div>
+                                <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                <p>যারা এখনো অন্যায় করছে তাদের বিরুদ্ধে প্রতিবাদ করা উচিত</p>
+                            </div>
+                        </div>
+                        <div class=" d-flex justify-content-center  gap-3">
+                            <div>
+                                <img src="image6.png" class="rounded-1" width="140px" alt="">
+                            </div>
+                            <div>
+                                <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                <p>যারা এখনো অন্যায় করছে তাদের বিরুদ্ধে প্রতিবাদ করা উচিত</p>
+                            </div>
+                        </div>
+                        <div class=" d-flex justify-content-center  gap-3">
+                            <div>
+                                <img src="image6.png" class="rounded-1" width="140px" alt="">
+                            </div>
+                            <div>
+                                <span class="time-text-color">২ ঘণ্টা আগে</span>
+                                <p>যারা এখনো অন্যায় করছে তাদের বিরুদ্ধে প্রতিবাদ করা উচিত</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="mt-4">
+        <div class="container-fluid">
+            <div class="row d-flex  align-items-center">
+                <div class="col-3 d-flex justify-content-center">
+                    <img src="logo.jpg" width="200px" alt="">
+                </div>
+                <div class="col-3">
+                    <div class="d-flex mt-3">
+                        <div class="vr  ms-2" style=" background-color: rgb(0, 0, 0); opacity: 1;"></div>
+                        <div class="contact-info ms-4" style="font-size: 12px;">
+                            <h5 class="mb-1">Zakat TV</h5>
+                            <p class="mb-0">Spice Television Limited</p>
+                            <p class="mb-0">City Park lane, 19 Hatkhola Road, Wari</p>
+                            <p class="mb-0">Dhaka-1203, Bangladesh</p>
+                            <p class="mb-0 text-muted mt-2">Phone:+8801324720001</p>
+                            <p class="text-muted ">Email:info@ekhon.tv</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="d-flex mt-3">
+                        <div class="vr  ms-2" style=" background-color: rgb(0, 0, 0); opacity: 1;"></div>
+                        <div class="contact-info ms-4" style="font-size: 12px;">
+                            <h5 class="mb-1">Zakat TV</h5>
+                            <p class="mb-0">Spice Television Limited</p>
+                            <p class="mb-0">City Park lane, 19 Hatkhola Road, Wari</p>
+                            <p class="mb-0">Dhaka-1203, Bangladesh</p>
+                            <p class="mb-0 text-muted mt-2">Phone:+8801324720001</p>
+                            <p class="text-muted ">Email:info@zakat.tv</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-3">
+                    <h6 class="text-center"><strong>সামাজিক যোগাযোগ মাধ্যম</strong></h6>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="#" class="text-decoration-none text-dark"><i
+                                class="fab fa-facebook-f fs-5 me-3"></i></a>
+                        <a href="#" class="text-decoration-none text-dark"><i class="fab fa-twitter fs-5 me-3"></i></a>
+                        <a href="#" class="text-decoration-none text-dark"><i class="fab fa-youtube fs-5 me-3"></i></a>
+                        <a href="#" class="text-decoration-none text-dark"><i
+                                class="fab fa-linkedin-in fs-5 me-3"></i></a>
+                        <a href="#" class="text-decoration-none text-dark"><i
+                                class="fab fa-instagram fs-5 me-3"></i></a>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5  " style="font-size: 12px;">
+                        <a class="text-muted me-2" href="#">ব্যবহারের শর্তাবলী</a>
+                        <a class="text-muted ms-2" href="#">গোপনীয়তা নীতি</a>
+                    </div>
+
+                </div>
+            </div>
+    </footer>
+
+
+    <div class="bottom-header  ">
+        <div class="row d-flex justify-content-center align-items-center g-0">
+            <!-- Title Section -->
+            <div class="col-2 d-flex justify-content-center align-items-center"
+                style="background-color: rgb(255, 174, 0);   padding: 10px;">
+                <div class="text-white text-center" style="font-weight: bold; font-size: 20px;">
+                    শিরোনাম
+                </div>
+            </div>
+
+            <!-- Scrolling Content Section -->
+            <div class="col-10 d-flex justify-content-center align-items-center">
+                <div class="scroll-container text-white" style="background-color: rgb(0, 24, 51);  padding: 10px;">
+                    <div class="scroll-content" style="font-weight: bold; font-size: 20px;">
+                        বিনিয়োগ, উৎপাদন, বিপণন, আমদানি-রপ্তানি, রাজস্ব আহরণ এবং ব্যাংক ব্যবস্থাপনার
+                        খবরের বিস্তারে যেতে আগ্রহী এখন। কৃষি ও শিল্পভিত্তিক অর্থনীতি এখন টিভি মূল প্রতিপাদ্য।
+                        ওয়ালটন শোরুমে এক্সচেঞ্জ অফার ... গ্রীষ্মকাল শুরু হতে আর মাত্র কয়েক সপ্তাহ বাকি।
+                        তবে ইতোমধ্যে নগরবাসীর মধ্যে এসি ও ফ্রিজ কেনার প্রতিযোগিতা শুরু হয়েছে।
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

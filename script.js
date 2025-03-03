@@ -1,27 +1,69 @@
-(function() {
-    function updateBengaliTime() {
-      const now = new Date();
-      const time = now.toLocaleString('bn-BD', { hour: '2-digit', minute: '2-digit', hour12: true }).replace(/AM|PM/, now.getHours() >= 12 ? 'অপরাহ্ণ' : 'পূর্বাহ্ণ');
-      const date = now.toLocaleString('bn-BD', { year: 'numeric', month: 'long', day: 'numeric' });
+(function () {
+  function updateBengaliTime() {
+    const now = new Date();
+    const time = now
+      .toLocaleString("bn-BD", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      })
+      .replace(/AM|PM/, now.getHours() >= 12 ? "অপরাহ্ণ" : "পূর্বাহ্ণ");
+    const date = now.toLocaleString("bn-BD", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
 
-      document.getElementById('time').textContent = time;
-      document.getElementById('date').textContent = date;
-    }
+    document.getElementById("time").textContent = time;
+    document.getElementById("date").textContent = date;
+  }
 
-    setInterval(updateBengaliTime, 60000); // Update every minute
-    updateBengaliTime(); // Initial call
-  })();
+  setInterval(updateBengaliTime, 60000); // Update every minute
+  updateBengaliTime(); // Initial call
+})();
 
+//Initialize Swiper
 
- //Initialize Swiper 
-
-   var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
-  spaceBetween: 10, 
-  loop: true, 
+  spaceBetween: 10,
+  loop: true,
   autoplay: {
-    delay: 1000, 
-    disableOnInteraction: false, 
+    delay: 1000,
+    disableOnInteraction: false,
   },
 });
- 
+
+function printArticle() {
+  window.print();
+}
+
+function copyToClipboard() {
+  const text = document.querySelector(".details").innerText;
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      alert("কনটেন্ট কপি করা হয়েছে!");
+    })
+    .catch((err) => {
+      console.error("কপি করতে সমস্যা হয়েছে: ", err);
+    });
+}
+
+function shareArticle() {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: document.title,
+        url: window.location.href,
+      })
+      .then(() => {
+        console.log("Shared successfully");
+      })
+      .catch((err) => {
+        console.error("Sharing failed:", err);
+      });
+  } else {
+    alert("Sharing not supported in this browser.");
+  }
+}

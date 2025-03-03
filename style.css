@@ -134,3 +134,196 @@ body {
 .dhakarome:hover a {
     text-decoration: underline; 
 }
+
+
+
+/* প্রিন্ট করার সময় শুধুমাত্র .print-content অংশ দেখাবে */
+@media print {
+  body * {
+      display: none !important; /* সবকিছু লুকাবে */
+  }
+  .print-content, .print-content * {
+      display: block !important; /* শুধুমাত্র নির্দিষ্ট অংশ দেখাবে */
+  }
+}
+
+
+/* photo storeis section start */
+
+.video-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.video-card:hover img {
+  filter: brightness(70%);
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  color: #ff9800;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+}
+
+.video-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: justify;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.section-title::before {
+  content: "";
+  width: 5px;
+  height: 20px;
+  background: #ff9800;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* photo story section end */
+
+/* time text color */
+
+.time-text-color {
+  color: rgb(184 134 11 );
+  font-size: 0.8rem;
+  padding-top: 5px;
+}
+
+.text-justify {
+  text-align: justify;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  
+}
+
+.bg-ekhon-orange-200{
+  background-color:  rgb(255, 255, 4); opacity: 1;;
+  width: .25rem;
+  height: 1.2rem;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+
+
+ .playlist-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+}
+.video-thumbnail1 {
+  position: relative;
+  width: 100px;
+  height: 70px;
+  border-radius: 8px;
+}
+.play-icon1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 193, 7, 0.9);
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-info {
+  flex: 1;
+  padding-left: 10px;
+}
+.video-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.video-meta {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+
+/* footer section */
+footer {
+  background-color: #f8f9fa;
+}
+
+.contact-info {
+  font-size: 13px;
+}
+
+footer a {
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #ff6600;
+}
+
+
+/* Default font sizes for larger screens */
+.title-text {
+  font-size: 20px;
+}
+
+.scrolling-text {
+  font-size: 20px;
+}
+
+/* Reduce font sizes on smaller screens */
+@media (max-width: 768px) {
+  .title-text {
+      font-size: 16px;
+  }
+
+  .scrolling-text {
+      font-size: 14px;
+  }
+}
+
+/* Even smaller font for mobile (phones) */
+@media (max-width: 480px) {
+  .title-text {
+      font-size: 14px;
+  }
+
+  .scrolling-text {
+      font-size: 12px;
+  }
+}
+
+
+/* header navbar */
