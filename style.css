@@ -30,7 +30,17 @@ body {
 } 
 
 
-
+.sideportion {
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  transition: top 0.3s ease-in-out;
+}
+.content {
+  margin-left: 270px;
+  padding: 20px;
+}
 
 
 /* trending button */
