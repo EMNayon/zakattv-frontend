@@ -67,3 +67,27 @@ function shareArticle() {
     alert("Sharing not supported in this browser.");
   }
 }
+
+
+
+// header search button 
+
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+const closeBtn = document.getElementById("close-btn");
+
+searchBtn.onclick = function() {
+    searchInput.style.width = "150px";
+    searchInput.style.opacity = "1";
+    searchBtn.classList.add("d-none");
+    closeBtn.classList.remove("d-none");
+};
+
+closeBtn.onclick = function() {
+    searchInput.style.width = "0";
+    searchInput.style.opacity = "0";
+    setTimeout(() => {
+        searchBtn.classList.remove("d-none");
+        closeBtn.classList.add("d-none");
+    }, 400);
+};
