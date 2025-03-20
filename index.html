@@ -17,16 +17,16 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm bg-white border-bottom shadow-sm fixed-top">
-            <div class="container-fluid d-flex align-items-center justify-content-between"
-                style="max-width: 1536px; margin: auto;">
-
+            <div class="container-fluid d-flex align-items-center justify-content-between" style="max-width: 1536px; margin: auto;">
+    
                 <!-- Logo -->
-                <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="logo.jpg" alt="" style="width:70px; border-radius: 50%;">
+                <a class="navbar-brand d-md-block d-none" href="javascript:void(0)">
+                    <img src="logo.jpg" alt="Logo" style="width:70px; border-radius: 50%;">
                 </a>
-
+    
+                <!-- Navbar Links for larger screens -->
                 <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav me-auto ">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">
                                 <i class="fas fa-home" style="color: orange;"></i>
@@ -34,63 +34,70 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="recent.html"><i class="fas fa-clock" style="color: orange;"></i>
-                                সাম্প্রতিক</a>
+                            <a class="nav-link" href="recent.html">
+                                <i class="fas fa-clock" style="color: orange;"></i> সাম্প্রতিক
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="videos.html"><i class="fas fa-video" style="color: orange;"></i>
-                                ভিডিও</a>
+                            <a class="nav-link" href="videos.html">
+                                <i class="fas fa-video" style="color: orange;"></i> ভিডিও
+                            </a>
                         </li>
                     </ul>
                     <form class="d-flex position-relative">
-                        <input class="form-control rounded-pill ps-4" type="text" placeholder="যা খুঁজতে চান.."
-                            aria-label="Search">
+                        <input class="form-control rounded-pill ps-4" type="text" placeholder="যা খুঁজতে চান.." aria-label="Search">
                         <span class="position-absolute top-50 end-0 translate-middle-y pe-3">
                             <i class="fas fa-search"></i>
                         </span>
                     </form>
                 </div>
-
-                <!-- Small screen live button -->
-                <div class="d-sm-none">
-                    <div class="  position-relative">
-                        <div class="pulse-effect"></div>
-                        <a href="#"
-                            class="btn  rounded-pill btn-sm fw-bold   position-relative d-flex align-items-center"
-                            style="z-index: 1; background-color:rgb(255 54 54 ) ;  height: 100%; width: auto;">
-                            <span class="text-white"><i class="fa-solid fa-video "></i> সরাসরি </span>
+    
+                <!-- Small Screen Items -->
+                <div id="smallScreenItems" class="d-sm-flex align-items-center gap-2 w-100 justify-content-between d-block d-md-none">
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Logo for small screens -->
+                        <a class="navbar-brand" href="javascript:void(0)">
+                            <img src="logo.jpg" alt="Logo" style="width:70px; border-radius: 50%;">
                         </a>
-                    </div>
-                </div>
-
-                <!-- Small screen photo stories button -->
-                <div class="d-sm-none">
-                    <a href="photo-stories.html" class="btn btn-warning btn-sm d-flex align-items-center">
-                        <i class="fa-solid fa-camera me-1"></i> ছ....
-                    </a>
-                </div>
-
-                <!-- Small screen search icon -->
-                <div class="d-sm-none">
-                    <div class="d-flex ">
-                        <div class=" d-flex d-block border-0  rounded-4  ">
-                            <input type="text" id="search-input" class="border-0" placeholder="Search............."
-                                style="width: 0; opacity: 0; transition: width 0.4s ease-in-out, opacity 0.3s ease-in-out; overflow: hidden;">
-                            <button id="close-btn" class="d-none bg-white border-0 "><i
-                                    class="fas fa-times"></i></button>
+    
+                        <!-- Direct Streaming Button -->
+                        <div class="position-relative">
+                            <div class="pulse-effect"></div>
+                            <a href="#" class="btn rounded-pill btn-sm fw-bold position-relative d-flex align-items-center"
+                                style="z-index: 1; background-color: rgb(255 54 54);">
+                                <span class="text-white"><i class="fa-solid fa-video"></i> সরাসরি </span>
+                            </a>
                         </div>
-                        <button id="search-btn" class="btn p-0"><i class="fas fa-search"></i></button>
+    
+                        <!-- Photo Stories Button -->
+                        <a href="photo-stories.html" class="btn btn-warning btn-sm d-flex align-items-center">
+                            <i class="fa-solid fa-camera me-1"></i> ছবি
+                        </a>
+    
+                        <!-- Search Button -->
+                        <button id="search-btn" class="btn p-0">
+                            <i class="fas fa-search"></i>
+                        </button>
+    
+                        <!-- Hamburger Menu (for small screens) -->
+                        <button class="navbar-toggler d-sm-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
                 </div>
-
-                <!-- Navbar toggler (Offcanvas menu) -->
-                <button class="navbar-toggler d-sm-none p-0 " type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    
+                <!-- Small Screen Search Container (hidden initially) -->
+                <div id="searchContainer" class="d-sm-none align-items-center w-100" style="display: none; position: absolute; left: 0; top: 0; right: 0; height: 93px; padding: 10px 15px; background: white; z-index: 999;">
+                    <input type="text" id="search-input" class="form-control rounded-pill ps-4 border" placeholder="যা খুঁজতে চান.." style="flex-grow: 1;">
+                    <button id="close-btn" class="btn bg-white border-0 ms-2">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+    
             </div>
         </nav>
     </header>
+    
 
     <!-- Offcanvas Menu for Small Screens -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">

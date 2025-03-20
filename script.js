@@ -69,25 +69,25 @@ function shareArticle() {
 }
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Get elements
+  const searchBtn = document.getElementById("search-btn");
+  const closeBtn = document.getElementById("close-btn");
+  const smallScreenItems = document.getElementById("smallScreenItems");
+  const searchContainer = document.getElementById("searchContainer");
 
-// header search button 
+  // Event listener for opening search input
+  searchBtn.addEventListener("click", () => {
+      smallScreenItems.style.display = "none"; // Hide small screen items (logo, direct stream, etc.)
+      searchContainer.style.display = "flex"; // Show search input
+  });
 
-const searchInput = document.getElementById("search-input");
-const searchBtn = document.getElementById("search-btn");
-const closeBtn = document.getElementById("close-btn");
+  // Event listener for closing search input
+  closeBtn.addEventListener("click", () => {
+      searchContainer.style.display = "none"; // Hide search input
+      smallScreenItems.style.display = "flex"; // Show small screen items again
+  });
+});
 
-searchBtn.onclick = function() {
-    searchInput.style.width = "150px";
-    searchInput.style.opacity = "1";
-    searchBtn.classList.add("d-none");
-    closeBtn.classList.remove("d-none");
-};
 
-closeBtn.onclick = function() {
-    searchInput.style.width = "0";
-    searchInput.style.opacity = "0";
-    setTimeout(() => {
-        searchBtn.classList.remove("d-none");
-        closeBtn.classList.add("d-none");
-    }, 400);
-};
+
