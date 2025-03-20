@@ -15,48 +15,202 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar  navbar-expand-sm bg-white border-bottom shadow-sm fixed-top">
-            <div class="container-fluid">
+    <header >
+        <nav class="navbar navbar-expand-sm bg-white border-bottom shadow-sm fixed-top" >
+            <div class="container-fluid d-flex align-items-center justify-content-between" style="max-width: 1536px; margin: auto;">
+               
+                <!-- Logo -->
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="logo.jpg" alt="" style="width: 50px;">
+                    <img src="logo.jpg" alt="" style="width:70px; border-radius: 50%;">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto ">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">মূল পাতা</a>
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home" style="color: orange;"></i>
+                    <span style="color: orange;">মূল পাতা</span>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="recent.html">সাম্প্রতিক</a>
+                            <a class="nav-link" href="recent.html"><i class="fas fa-clock" style="color: orange;"></i> সাম্প্রতিক</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="videos.html">ভিডিও</a>
+                            <a class="nav-link" href="videos.html"><i class="fas fa-video" style="color: orange;"></i> ভিডিও</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Search">
-                        <button class="btn btn-primary" type="button">Search</button>
+                    <form class="d-flex position-relative">
+                        <input class="form-control rounded-pill ps-4" type="text" placeholder="যা খুঁজতে চান.." aria-label="Search">
+                        <span class="position-absolute top-50 end-0 translate-middle-y pe-3">
+                            <i class="fas fa-search"></i>
+                        </span>
                     </form>
                 </div>
+
+                <!-- Small screen live button -->
+                <div class="d-sm-none">
+                    <div class="  position-relative"  >
+                        <div class="pulse-effect"></div>
+                        <a href="#" class="btn  rounded-pill btn-sm fw-bold   position-relative d-flex align-items-center" style="z-index: 1; background-color:rgb(255 54 54 ) ;  height: 100%; width: auto;" >
+                            <span class="text-white"><i class="fa-solid fa-video "></i> সরাসরি </span>
+                        </a>
+                    </div> 
+                </div>
+                
+                <!-- Small screen photo stories button -->
+                <div class="d-sm-none" >
+                    <a href="photo-stories.html" class="btn btn-warning btn-sm d-flex align-items-center">
+                        <i class="fa-solid fa-camera me-1"></i> ছ....
+                    </a>
+                </div>
+                
+                <!-- Small screen search icon -->
+                <div class="d-sm-none" >
+                    <div class="d-flex " >
+                        <div class=" d-flex d-block border-0  rounded-4  " >
+                            <input type="text" id="search-input" class="border-0" placeholder="Search............."  style="width: 0; opacity: 0; transition: width 0.4s ease-in-out, opacity 0.3s ease-in-out; overflow: hidden;">
+                            <button id="close-btn" class="d-none bg-white border-0 "><i class="fas fa-times"></i></button>
+                        </div>
+                        <button id="search-btn" class="btn p-0"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Navbar toggler (Offcanvas menu) -->
+                <button class="navbar-toggler d-sm-none p-0 "   type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <span class="navbar-toggler-icon" ></span>
+                </button>
             </div>
         </nav>
     </header>
-    <div class="container-fluid mt-5">
-        <div class="row d-flex ">
-            <div class="col-12 col-md-2 mt-4">
-                <div class="zkt-live ">
-                    <div class="animation ">
-                        <div class="ping">
-                            <button class="animated-btn btn">Click me</button>
+    
+    <!-- Offcanvas Menu for Small Screens -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">মেনু</h5>
+            <button type="button" class="btn-close " data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="sidebar mt-3">
+                <!-- Button -->
+                <a href="photo-stories.html" class="btn btn-danger ms-2  mt-3  ">
+                    <i class="fa-solid fa-video  "></i> ছবি গল্প
+                </a>
+            
+                <nav class="navbar navbar-expand-lg flex-column">
+                    <div class="container-fluid">
+                        <div id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column">
+                                
+                                <!-- Normal Menu Items -->
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">দেশে এখন</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="gallery.html">ছবি</a>
+                                </li>
+                               
+                                <!-- Accordion Section - অর্থনীতি -->
+                                <li class="nav-item">
+                                    <div class="accordion border-0" id="accordionExample">
+                                        <div class="accordion-item border-0">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button border-0  shadow-none bg-white p-0" type="button" 
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                    aria-expanded="false" aria-controls="collapseOne">
+                                                    <span class="text-dark ">অর্থনীতি</span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show" 
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body pt-0 ps-5">
+                                                  <div class="d-flex">
+                                                    <div class="vr" style=" margin-right: 10px;"></div>
+                                                    <ul class="list-unstyled">
+                                                        <li><a class="text-decoration-none text-dark" href="#">শিল্প-কারখানা</a></li>
+                                                        <li><a class="text-decoration-none text-dark" href="#">ব্যবসা-বাণিজ্য</a></li>
+                                                        <li><a class="text-decoration-none text-dark" href="#">বাজেট</a></li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+            
+                                <!-- Normal Menu Items -->
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                </li>
+            
+                                <!-- Accordion Section - কৃষি -->
+                                <li class="nav-item">
+                                    <div class="accordion border-0" id="accordionExample2">
+                                        <div class="accordion-item border-0">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button border-0 shadow-none bg-white p-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    <span class="text-dark">কৃষি</span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse " 
+                                                data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body pt-0 ps-5">
+                                                 <div class="d-flex">
+                                                  <div class="vr" style=" margin-right: 10px;"></div>
+                                                  <ul class="list-unstyled">
+                                                      <li><a class="text-decoration-none text-dark" href="#">মৎস্য ও প্রাণীসম্পদ</a></li>
+                                                      <li><a class="text-decoration-none text-dark" href="#">কৃষি গবেষণা</a></li>
+                                                      <li><a class="text-decoration-none text-dark" href="#">কৃষি নীতি</a></li>
+                                                  </ul>
+                                                 </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+            
+                            </ul>
                         </div>
                     </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <header >
+        <nav class="navbar navbar-expand bg-white shadow-sm fixed-bottom d-sm-none">
+            <div class="container-fluid justify-content-around">
+                <a class="nav-link text-center" href="index.html">
+                    <i class="fas fa-home" style="color: orange;"></i><br>
+                    <span style="color: orange;">মূল পাতা</span>
+                </a>
+                <a class="nav-link text-center" href="recent.html">
+                    <i class="fas fa-clock"></i><br>
+                    সাম্প্রতিক
+                </a>
+                <a class="nav-link text-center" href="videos.html">
+                    <i class="fas fa-video"></i><br>
+                    ভিডিও
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid mt-5" style="max-width: 1536px;">
+        <div class="row d-flex ">
+            <div class="col-lg-2 d-lg-block d-none mt-5">
+                <div class="  position-relative" style="width: fit-content;">
+                    <div class="pulse-effect"></div>
+                    <a href="#"
+                        class="btn  rounded-pill px-4 py-2 fw-bold   position-relative d-flex align-items-center"
+                        style="z-index: 1; background-color:rgb(255 54 54 ) ;  height: 100%; width: auto;">
+                        <span class="text-white"><i class="fa-solid fa-video ms-2 me-2"></i> সরাসরি দেখুন</span>
+                    </a>
                 </div>
 
 
-                <div class="zkt-time  bg-white p-2 mt-5" style=" border-radius: 20px;">
+                <div class="zkt-time  bg-white p-2 mt-4" style=" border-radius: 20px;">
                     <div class="ms-3">
                         <strong>
                             <div class="mb-2 fs-5" id="time"></div>
@@ -65,109 +219,89 @@
                     </div>
                 </div>
 
-                <div class="sidebar  mt-3">
-                    <a href="photo-stories.html" class="btn btn-danger ms-3 mt-3 p-2"><i
-                            class="fa-solid fa-video me-2"></i> Picture
-                        Story</a>
-                    <nav class="navbar navbar-expand-lg  flex-column">
+                <div class="sidebar mt-3 d-flex flex-column align-items-center">
+                    <!-- Button -->
+                    <a href="photo-stories.html"
+                        class="btn btn-danger rounded-pill w-75  mt-3 p-2 text-white text-center border-0"
+                        style="background-color: rgb(255 171 0 ); opacity: 1; ">
+                        <i class="fa-solid fa-video me-2 "></i> ছবি গল্প
+                    </a>
+
+                    <nav class="navbar navbar-expand-lg flex-column w-100">
                         <div class="container-fluid">
                             <div id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column ">
+
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">দেশে এখন</a>
+                                        <a class="nav-link active" href="#">দেশে এখন</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <div class="accordion  border-0" id="accordionPanelsStayOpenExample"
-                                            style="margin-left: -12px;">
-                                            <div class="accordion-item  border-0">
+                                        <a class="nav-link active" aria-current="page" href="gallery.html">ছবি</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="accordion border-0 w-100" id="accordionExample">
+                                            <div class="accordion-item border-0">
                                                 <h2 class="accordion-header">
-                                                    <button class="accordion-button border-0 shadow-none"
-                                                        style="display: flex; justify-content: space-between; align-items: center; background-color: #fff;"
+                                                    <button
+                                                        class="accordion-button border-0 shadow-none bg-white p-2 w-100"
                                                         type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#panelsStayOpen-collapseOne"
-                                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                                        <a class="text-decoration-none text-dark" href="#">অর্থনীতি</a>
-
+                                                        data-bs-target="#collapseOne" aria-expanded="false"
+                                                        aria-controls="collapseOne">
+                                                        <span class="text-dark">অর্থনীতি</span>
                                                     </button>
                                                 </h2>
-                                                <div id="panelsStayOpen-collapseOne"
-                                                    class="accordion-collapse collapse show"
-                                                    data-bs-parent="#accordionPanelsStayOpenExample">
+                                                <div id="collapseOne" class="accordion-collapse collapse show">
                                                     <div class="accordion-body pt-0 ps-5">
                                                         <div class="d-flex">
-                                                            <div class="vr" style=" margin-right: 10px;"></div>
+                                                            <div class="vr me-2"></div>
                                                             <ul class="list-unstyled">
                                                                 <li><a class="text-decoration-none text-dark"
                                                                         href="#">শিল্প-কারখানা</a></li>
                                                                 <li><a class="text-decoration-none text-dark"
-                                                                        href="#">শিল্প-কারখানা</a></li>
+                                                                        href="#">ব্যবসা-বাণিজ্য</a></li>
                                                                 <li><a class="text-decoration-none text-dark"
-                                                                        href="#">শিল্প-কারখানা</a></li>
+                                                                        href="#">বাজেট</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">আন্তর্জাতিক বাণিজ্য</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <div class="accordion  border-0" id="accordionPanelsStayOpenExample"
-                                            style="margin-left: -12px;">
-                                            <div class="accordion-item  border-0">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button border-0 shadow-none"
-                                                        style="display: flex; justify-content: space-between; align-items: center; background-color: #fff;"
-                                                        type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#panelsStayOpen-collapseOne"
-                                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                                        <a class="text-decoration-none text-dark" href="#">কৃষি</a>
 
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#">আন্তর্জাতিক বাণিজ্য</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <div class="accordion border-0 w-100" id="accordionExample2">
+                                            <div class="accordion-item border-0">
+                                                <h2 class="accordion-header">
+                                                    <button
+                                                        class="accordion-button border-0 shadow-none bg-white p-2 w-100"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseTwo" aria-expanded="false"
+                                                        aria-controls="collapseTwo">
+                                                        <span class="text-dark">কৃষি</span>
                                                     </button>
                                                 </h2>
-                                                <div id="panelsStayOpen-collapseOne"
-                                                    class="accordion-collapse collapse show"
-                                                    data-bs-parent="#accordionPanelsStayOpenExample">
+                                                <div id="collapseTwo" class="accordion-collapse collapse">
                                                     <div class="accordion-body pt-0 ps-5">
                                                         <div class="d-flex">
-                                                            <div class="vr" style=" margin-right: 10px;"></div>
+                                                            <div class="vr me-2"></div>
                                                             <ul class="list-unstyled">
                                                                 <li><a class="text-decoration-none text-dark"
                                                                         href="#">মৎস্য ও প্রাণীসম্পদ</a></li>
                                                                 <li><a class="text-decoration-none text-dark"
-                                                                        href="#">মৎস্য ও প্রাণীসম্পদ</a></li>
+                                                                        href="#">কৃষি গবেষণা</a></li>
                                                                 <li><a class="text-decoration-none text-dark"
-                                                                        href="#">মৎস্য ও প্রাণীসম্পদ</a></li>
+                                                                        href="#">কৃষি নীতি</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     </li>
                                 </ul>
